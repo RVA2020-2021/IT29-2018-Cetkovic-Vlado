@@ -28,7 +28,7 @@ public class Sektor implements Serializable {
 	private String oznaka;
 
 	//bi-directional many-to-one association to Radnik
-	@OneToMany(mappedBy="sektor")
+	@OneToMany(mappedBy="sektor", cascade = {CascadeType.DETACH, CascadeType.REMOVE})
 	@JsonIgnore
 	private List<Radnik> radniks;
 
