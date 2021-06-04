@@ -32,7 +32,7 @@ public class Preduzece implements Serializable {
 
 	@JsonIgnore
 	//bi-directional many-to-one association to Sektor
-	@OneToMany(mappedBy="preduzece", cascade = {CascadeType.DETACH, CascadeType.REMOVE})
+	@OneToMany(mappedBy="preduzece")
 	private List<Sektor> sektors;
 
 	public Preduzece() {

@@ -30,7 +30,7 @@ public class Obrazovanje implements Serializable {
 
 	//bi-directional many-to-one association to Radnik
 	@JsonIgnore
-	@OneToMany(mappedBy="obrazovanje", cascade = {CascadeType.DETACH, CascadeType.REMOVE})
+	@OneToMany(mappedBy="obrazovanje")
 	private List<Radnik> radniks;
 
 	public Obrazovanje() {
