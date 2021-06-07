@@ -1,7 +1,6 @@
 --Test Data
 
 --Obrazovanje podaci
-NEXTVAL('radnik_seq')
 
 INSERT INTO "obrazovanje"("id", "naziv", "stepen_strucne_spreme", "opis")
 VALUES (NEXTVAL('obrazovanje_seq'), 'Fakultetsko obrazovanje', '7', 'IIS');
