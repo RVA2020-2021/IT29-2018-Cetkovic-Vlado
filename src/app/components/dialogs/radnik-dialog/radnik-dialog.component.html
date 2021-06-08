@@ -9,7 +9,7 @@
         <mat-form-field>
           <mat-select [(ngModel)]="data.obrazovanje" placeholder="Obrazovanje" name="obrazovanje" [compareWith]="compareTo" [disabled]="flag == 3">
             <mat-option *ngFor="let obrazovanje of obrazovanja" [value]="obrazovanje">
-              {{ obrazovanje.naziv }}
+              {{ obrazovanje.naziv + ' ' + obrazovanje.opis}}
             </mat-option>
           </mat-select>
         </mat-form-field>

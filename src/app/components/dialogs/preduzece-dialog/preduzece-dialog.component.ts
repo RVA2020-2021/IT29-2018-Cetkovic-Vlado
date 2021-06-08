@@ -25,13 +25,13 @@ export class PreduzeceDialogComponent implements OnInit {
   public add(): void {
     this.preduzeceService.addPreduzece(this.data)
       .subscribe(() => {
-        this.snackBar.open('Uspesno dodato preduzece: ' + this.data.naziv, 'U redu', {
+        this.snackBar.open('Uspešno dodato preduzeće: ' + this.data.naziv, 'U redu', {
           duration: 2500
         });
       }),
       (error: Error) => {
         console.log(error.name + '---->' + error.message)
-        this.snackBar.open('Dogodila se greska. Pokusajte ponovo!', 'Zatvori', {
+        this.snackBar.open('Dogodila se greška. Pokušajte ponovo!', 'Zatvori', {
           duration: 2500
         });
       };
@@ -40,13 +40,13 @@ export class PreduzeceDialogComponent implements OnInit {
   public update(): void {
     this.preduzeceService.updatePreduzece(this.data)
       .subscribe(() => {
-        this.snackBar.open('Uspesno modifikovano preduzece: ' + this.data.naziv, 'U redu', {
+        this.snackBar.open('Uspešno modifikovano preduzeće: ' + this.data.naziv, 'U redu', {
           duration: 2500
         });
       }),
       (error: Error) => {
         console.log(error.name + '---->' + error.message)
-        this.snackBar.open('Dogodila se greska. Pokusajte ponovo!', 'Zatvori', {
+        this.snackBar.open('Dogodila se greška. Pokušajte ponovo!', 'Zatvori', {
           duration: 2500
         });
       };
@@ -55,13 +55,13 @@ export class PreduzeceDialogComponent implements OnInit {
   public delete(): void {
     this.preduzeceService.deletePreduzece(this.data.id)
       .subscribe(() => {
-        this.snackBar.open('Uspesno obrisano preduzece', 'U redu', {
+        this.snackBar.open('Uspešno obrisano preduzeće', 'U redu', {
           duration: 2500
         });
       }),
       (error: Error) => {
         console.log(error.name + '---->' + error.message)
-        this.snackBar.open('Dogodila se greska. Pokusajte ponovo!', 'Zatvori', {
+        this.snackBar.open('Dogodila se greška. Pokušajte ponovo!', 'Zatvori', {
           duration: 2500
         });
       };

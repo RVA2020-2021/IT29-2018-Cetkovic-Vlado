@@ -41,13 +41,13 @@ export class RadnikDialogComponent implements OnInit {
   public add(): void {
     this.radnikService.addRadnik(this.data)
     .subscribe(() => {
-      this.snackBar.open('Uspesno dodat radnik: ' + this.data.ime, 'U redu', {
+      this.snackBar.open('Uspešno dodat radnik: ' + this.data.ime, 'U redu', {
         duration: 2500
       });
     }),
     (error: Error) => {
       console.log(error.name + '---->' + error.message)
-      this.snackBar.open('Dogodila se greska. Pokusajte ponovo!', 'Zatvori', {
+      this.snackBar.open('Dogodila se greška. Pokušajte ponovo!', 'Zatvori', {
         duration: 2500
       });
     };
@@ -56,13 +56,13 @@ export class RadnikDialogComponent implements OnInit {
   public update(): void {
     this.radnikService.updateRadnik(this.data)
       .subscribe(() => {
-        this.snackBar.open('Uspesno modifikovan radnik: ' + this.data.ime, 'U redu', {
+        this.snackBar.open('Uspešno modifikovan radnik: ' + this.data.ime, 'U redu', {
           duration: 2500
         });
       }),
       (error: Error) => {
         console.log(error.name + '---->' + error.message)
-        this.snackBar.open('Dogodila se greska. Pokusajte ponovo!', 'Zatvori', {
+        this.snackBar.open('Dogodila se greška. Pokušajte ponovo!', 'Zatvori', {
           duration: 2500
         });
       };
@@ -71,13 +71,13 @@ export class RadnikDialogComponent implements OnInit {
   public delete(): void {
     this.radnikService.deleteRadnik(this.data.id)
       .subscribe(() => {
-        this.snackBar.open('Uspesno obrisan radnik', 'U redu', {
+        this.snackBar.open('Uspešno obrisan radnik', 'U redu', {
           duration: 2500
         });
       }),
       (error: Error) => {
         console.log(error.name + '---->' + error.message)
-        this.snackBar.open('Dogodila se greska. Pokusajte ponovo!', 'Zatvori', {
+        this.snackBar.open('Dogodila se greška. Pokušajte ponovo!', 'Zatvori', {
           duration: 2500
         });
       };

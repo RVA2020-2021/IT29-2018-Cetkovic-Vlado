@@ -46,13 +46,13 @@ export class SektorDialogComponent implements OnInit {
   public add(): void {
     this.sektorService.addSektor(this.data)
     .subscribe(() => {
-        this.snackBar.open('Uspesno dodat sektor', 'U redu', {
+        this.snackBar.open('Uspešno dodat sektor', 'U redu', {
           duration: 2500
         });
       }),
       (error: Error) => {
         console.log(error.name + '---->' + error.message)
-        this.snackBar.open('Dogodila se greska. Pokusajte ponovo!', 'Zatvori', {
+        this.snackBar.open('Dogodila se greška. Pokušajte ponovo!', 'Zatvori', {
           duration: 2500
         });
       };
@@ -61,13 +61,13 @@ export class SektorDialogComponent implements OnInit {
   public update(): void {
     this.sektorService.updateSektor(this.data)
       .subscribe(() => {
-        this.snackBar.open('Uspesno modifikovan sektor: ' + this.data.naziv, 'U redu', {
+        this.snackBar.open('Uspešno modifikovan sektor: ' + this.data.naziv, 'U redu', {
           duration: 2500
         });
       }),
       (error: Error) => {
         console.log(error.name + '---->' + error.message)
-        this.snackBar.open('Dogodila se greska. Pokusajte ponovo!', 'Zatvori', {
+        this.snackBar.open('Dogodila se greška. Pokušajte ponovo!', 'Zatvori', {
           duration: 2500
         });
       };
@@ -76,13 +76,13 @@ export class SektorDialogComponent implements OnInit {
   public delete(): void {
     this.sektorService.deleteSektor(this.data.id)
       .subscribe(() => {
-        this.snackBar.open('Uspesno obrisan sektor', 'U redu', {
+        this.snackBar.open('Uspešno obrisan sektor', 'U redu', {
           duration: 2500
         });
       }),
       (error: Error) => {
         console.log(error.name + '---->' + error.message)
-        this.snackBar.open('Dogodila se greska. Pokusajte ponovo!', 'Zatvori', {
+        this.snackBar.open('Dogodila se greška. Pokušajte ponovo!', 'Zatvori', {
           duration: 2500
         });
       };

@@ -24,13 +24,13 @@ export class ObrazovanjeDialogComponent implements OnInit {
   public add(): void {
     this.obrazovanjeService.addObrazovanje(this.data)
       .subscribe(() => {
-        this.snackBar.open('Uspesno dodato obrazovanje: ' + this.data.naziv, 'U redu', {
+        this.snackBar.open('Uspešno dodato obrazovanje: ' + this.data.naziv, 'U redu', {
           duration: 2500
         });
       }),
       (error: Error) => {
         console.log(error.name + '---->' + error.message)
-        this.snackBar.open('Dogodila se greska. Pokusajte ponovo!', 'Zatvori', {
+        this.snackBar.open('Dogodila se greška. Pokušajte ponovo!', 'Zatvori', {
           duration: 2500
         });
       };
@@ -39,13 +39,13 @@ export class ObrazovanjeDialogComponent implements OnInit {
   public update(): void {
     this.obrazovanjeService.updateObrazovanje(this.data)
       .subscribe(() => {
-        this.snackBar.open('Uspesno modifikovano obrazovanje: ' + this.data.naziv, 'U redu', {
+        this.snackBar.open('Uspešno modifikovano obrazovanje: ' + this.data.naziv, 'U redu', {
           duration: 2500
         });
       }),
       (error: Error) => {
         console.log(error.name + '---->' + error.message)
-        this.snackBar.open('Dogodila se greska. Pokusajte ponovo!', 'Zatvori', {
+        this.snackBar.open('Dogodila se greška. Pokušajte ponovo!', 'Zatvori', {
           duration: 2500
         });
       };
@@ -54,13 +54,13 @@ export class ObrazovanjeDialogComponent implements OnInit {
   public delete(): void {
     this.obrazovanjeService.deleteObrazovanje(this.data.id)
       .subscribe(() => {
-        this.snackBar.open('Uspesno obrisano obrazovanje.', 'U redu', {
+        this.snackBar.open('Uspešno obrisano obrazovanje.', 'U redu', {
           duration: 2500
         });
       }),
       (error: Error) => {
         console.log(error.name + '---->' + error.message)
-        this.snackBar.open('Dogodila se greska. Pokusajte ponovo!', 'Zatvori', {
+        this.snackBar.open('Dogodila se greška. Pokušajte ponovo!', 'Zatvori', {
           duration: 2500
         });
       };
